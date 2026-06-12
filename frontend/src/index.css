@@ -1,0 +1,47 @@
+#root {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main {
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+
+body {
+  font-family: "PT Sans", Roboto, "Segoe UI", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 10px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 16px;
+}

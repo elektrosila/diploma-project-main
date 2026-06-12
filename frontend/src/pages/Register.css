@@ -1,0 +1,137 @@
+.form-register {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 300px;
+  margin: 0 auto;
+  background: transparent;
+  padding: 1rem;
+}
+
+.form-register h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+  padding-left: 1rem;
+}
+
+.text-field {
+  position: relative;
+}
+
+.text-field__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 0.5rem;
+  pointer-events: none;
+  color: #666;
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+  transform-origin: 0 0;
+}
+
+.text-field__input {
+  width: 90%;
+  padding: 0.95rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #fff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.text-field__input::placeholder {
+  color: transparent;
+}
+
+.text-field__input:focus {
+  border-color: #c1121f;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(193, 18, 31, 0.25);
+}
+
+.text-field_floating .text-field__input:focus + .text-field__label,
+.text-field_floating .text-field__input:not(:placeholder-shown) + .text-field__label {
+  opacity: 0.65;
+  transform: scale(0.75) translateY(-0.4rem) translateX(0.16rem);
+}
+
+.terms {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  bottom: 10px;
+}
+
+.terms input[type="checkbox"] {
+  margin-top: 1.25rem;
+}
+
+.terms-label a {
+  color: #c1121f;
+  text-decoration: none;
+}
+
+.terms-label a:hover {
+  text-decoration: underline;
+}
+
+
+.input-error {
+  border-color: #ff4d4f !important;
+  animation: pulse-error 1s ease-in-out infinite;
+}
+
+@keyframes pulse-error {
+  0% { box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(255, 77, 79, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 79, 0); }
+}
+
+.form-register button {
+  position: relative;
+  top: 7px;
+  align-self: center;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.8rem;
+  background-color: #c1121f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.form-register button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-register button:hover:not(:disabled) {
+  background-color: #9b2226;
+}
+
+@keyframes pulse-error {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+
+.error-message-reg {
+  position: relative;
+  top: 10px;
+  color: #ff4d4f;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: -0.5rem;
+}
