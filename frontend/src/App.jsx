@@ -50,7 +50,7 @@ const App = () => {
   useEffect(() => {
     const fetchVariants = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/variants");
+        const response = await fetch("/api/variants");
         if (!response.ok) throw new Error("Network response was not ok");
         const variants = await response.json();
         setVariantsList(variants);
