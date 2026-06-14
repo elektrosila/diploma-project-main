@@ -24,7 +24,7 @@ const pool = require("./config/db");
 const apiRouter = require("./routes");
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || process.env.BACKEND_PORT || 5000;
 
 
 app.use(cors());

@@ -26,13 +26,17 @@ services:
       - DB_PASSWORD=${DATABASE_PASSWORD}
       - DB_NAME=${DATABASE_NAME}
     expose:
-      - "${BACKEND_PORT}"
+      - "5000"
+    depends_on:
+      - db
     networks:
       - myapp_network
 
   frontend:
     build: ./frontend
     restart: always
+    expose:
+      - "80"
     networks:
       - myapp_network
 
